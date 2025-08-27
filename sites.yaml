@@ -1,0 +1,180 @@
+# Aggregators (most volume) — with pagination fallback
+duunitori:
+  pages:
+    - { url: "https://duunitori.fi/tyopaikat/alue/helsinki", default_location: "Helsinki" }
+    - { url: "https://duunitori.fi/tyopaikat/alue/espoo",    default_location: "Espoo" }
+    - { url: "https://duunitori.fi/tyopaikat/alue/vantaa",   default_location: "Vantaa" }
+  delay: 0.8
+  max_pages: 4
+  selectors:
+    base: "https://duunitori.fi"
+    link_pattern: "^/tyopaikat/tyo/"
+
+jobly:
+  pages:
+    - { url: "https://jobly.fi/search?q=Helsinki", default_location: "Helsinki" }
+    - { url: "https://jobly.fi/search?q=Espoo",    default_location: "Espoo" }
+    - { url: "https://jobly.fi/search?q=Vantaa",   default_location: "Vantaa" }
+  delay: 0.8
+  max_pages: 3
+  selectors:
+    base: "https://jobly.fi"
+    link_pattern: "^/avoimet-tyopaikat/"
+
+oikotie:
+  pages:
+    - { url: "https://tyopaikat.oikotie.fi/tyopaikat/helsinki", default_location: "Helsinki" }
+    - { url: "https://tyopaikat.oikotie.fi/tyopaikat/espoo",    default_location: "Espoo" }
+    - { url: "https://tyopaikat.oikotie.fi/tyopaikat/vantaa",   default_location: "Vantaa" }
+  delay: 0.8
+  max_pages: 3
+  selectors:
+    base: "https://tyopaikat.oikotie.fi"
+    link_pattern: "^/tyopaikat/"
+
+# Staffing companies (great for warehouse/cleaning/kitchen)
+barona:
+  pages:
+    - { url: "https://barona.fi/tyopaikkamme", default_location: "Helsinki" }
+    - { url: "https://barona.fi/tyopaikkamme", default_location: "Espoo" }
+    - { url: "https://barona.fi/tyopaikkamme", default_location: "Vantaa" }
+  delay: 0.8
+  selectors:
+    base: "https://barona.fi"
+    link_pattern: "^/tyopaikat/"
+
+staffpoint:
+  pages:
+    - { url: "https://www.staffpoint.fi/tyopaikat", default_location: "Helsinki" }
+    - { url: "https://www.staffpoint.fi/tyopaikat", default_location: "Espoo" }
+    - { url: "https://www.staffpoint.fi/tyopaikat", default_location: "Vantaa" }
+  delay: 0.8
+  selectors:
+    base: "https://www.staffpoint.fi"
+    link_pattern: "^/tyopaikat/"
+
+adecco:
+  pages:
+    - { url: "https://www.adecco.fi/tyopaikat", default_location: "Helsinki" }
+    - { url: "https://www.adecco.fi/tyopaikat", default_location: "Espoo" }
+    - { url: "https://www.adecco.fi/tyopaikat", default_location: "Vantaa" }
+  delay: 0.8
+  selectors:
+    base: "https://www.adecco.fi"
+    link_pattern: "^/tyopaikat/"
+
+eezy:
+  pages:
+    - { url: "https://eezy.fi/tyopaikat", default_location: "Helsinki" }
+    - { url: "https://eezy.fi/tyopaikat", default_location: "Espoo" }
+    - { url: "https://eezy.fi/tyopaikat", default_location: "Vantaa" }
+  delay: 0.8
+  selectors:
+    base: "https://eezy.fi"
+    link_pattern: "^/tyopaikat/"
+
+boltworks:
+  pages:
+    - { url: "https://www.bolt.works/tyopaikat", default_location: "Helsinki" }
+    - { url: "https://www.bolt.works/tyopaikat", default_location: "Espoo" }
+    - { url: "https://www.bolt.works/tyopaikat", default_location: "Vantaa" }
+  delay: 0.8
+  selectors:
+    base: "https://www.bolt.works"
+    link_pattern: "^/tyopaikat/"
+
+manpower:
+  pages:
+    - { url: "https://www.manpower.fi/tyopaikat", default_location: "Helsinki" }
+    - { url: "https://www.manpower.fi/tyopaikat", default_location: "Espoo" }
+    - { url: "https://www.manpower.fi/tyopaikat", default_location: "Vantaa" }
+  delay: 0.8
+  selectors:
+    base: "https://www.manpower.fi"
+    link_pattern: "^/tyopaikat/"
+
+goon:
+  pages:
+    - { url: "https://www.go-on.fi/avoimet-tyopaikat", default_location: "Helsinki" }
+    - { url: "https://www.go-on.fi/avoimet-tyopaikat", default_location: "Espoo" }
+    - { url: "https://www.go-on.fi/avoimet-tyopaikat", default_location: "Vantaa" }
+  delay: 0.8
+  selectors:
+    base: "https://www.go-on.fi"
+    link_pattern: "^/avoimet-tyopaikat/"
+
+# Cleaning/facility companies
+iss:
+  pages:
+    - { url: "https://www.iss.fi/tyopaikat", default_location: "Helsinki" }
+  delay: 0.8
+  selectors:
+    base: "https://www.iss.fi"
+    link_pattern: "^/tyopaikat/"
+
+sol:
+  pages:
+    - { url: "https://www.sol.fi/tyopaikat/", default_location: "Helsinki" }
+  delay: 0.8
+  selectors:
+    base: "https://www.sol.fi"
+    link_pattern: "^/tyopaikat/"
+
+lassila_tikanoja:
+  pages:
+    - { url: "https://www.lt.fi/avoimet-tyopaikat", default_location: "Helsinki" }
+  delay: 0.8
+  selectors:
+    base: "https://www.lt.fi"
+    link_pattern: "^/avoimet-tyopaikat|^/tyopaikat"
+
+# Public/municipal
+seure:
+  pages:
+    - { url: "https://www.seure.fi/tyopaikat/", default_location: "Helsinki" }
+  delay: 0.8
+  selectors:
+    base: "https://www.seure.fi"
+    link_pattern: "^/tyopaikat/"
+
+# Restaurant groups / fast-food
+hesburger:
+  pages:
+    - { url: "https://www.hesburger.fi/tyopaikat/avoimet-tyopaikat", default_location: "Helsinki" }
+  delay: 0.8
+  selectors:
+    base: "https://www.hesburger.fi"
+    link_pattern: "^/tyopaikat/"
+
+noho_partners:
+  pages:
+    - { url: "https://www.noho.fi/tyopaikat/", default_location: "Helsinki" }
+  delay: 0.8
+  selectors:
+    base: "https://www.noho.fi"
+    link_pattern: "^/tyopaikat/"
+
+restel:
+  pages:
+    - { url: "https://www.restel.fi/tyopaikat/avoimet-tyopaikat", default_location: "Helsinki" }
+  delay: 0.8
+  selectors:
+    base: "https://www.restel.fi"
+    link_pattern: "^/tyopaikat/"
+
+# Grocery groups (often have kitchen/retail jobs)
+s_group:
+  pages:
+    - { url: "https://careers.sok.fi/search/?query=", default_location: "Helsinki" }
+  delay: 0.8
+  selectors:
+    base: "https://careers.sok.fi"
+    link_pattern: "^/job/"
+
+k_group:
+  pages:
+    - { url: "https://careers.kesko.fi/search/?query=", default_location: "Helsinki" }
+  delay: 0.8
+  selectors:
+    base: "https://careers.kesko.fi"
+    link_pattern: "^/job/"

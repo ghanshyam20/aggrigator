@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width,initial-scale=1'/>
+<title>Jobs — aggregated</title>
+<style>
+  :root { --bg:#0b0d10; --card:#13161a; --muted:#9aa4af; --text:#e8eef5; --accent:#5fa8ff; }
+  * { box-sizing: border-box; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+  body { margin: 0; background: var(--bg); color: var(--text); }
+  header { position: sticky; top: 0; z-index: 10; background: rgba(11,13,16,0.8); backdrop-filter: blur(8px); padding: 16px; border-bottom: 1px solid #1f242b; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
+  h1 { margin: 0 0 12px; font-size: 22px; }
+  .controls { display: grid; grid-template-columns: 1fr 220px 220px; gap: 10px; }
+  input, select { width: 100%; padding: 10px 12px; background: #0f1216; color: var(--text); border: 1px solid #232a32; border-radius: 10px; }
+  main.wrap { display: grid; grid-template-columns: 1fr; gap: 12px; }
+  .card { background: var(--card); border: 1px solid #1f242b; border-radius: 14px; padding: 14px; }
+  .card-head { display:flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .title { color: var(--text); text-decoration: none; font-weight: 650; }
+  .title:hover { color: var(--accent); }
+  .source { font-size: 12px; color: var(--muted); }
+  .meta { margin-top: 6px; font-size: 13px; color: var(--muted); }
+  .sep { margin: 0 6px; opacity: .6; }
+  .snippet { margin: 8px 0 10px; color: #c9d2db; font-size: 14px; }
+  .actions { display:flex; gap:10px; }
+  .actions .apply, .actions button { appearance:none; border:1px solid #2a313a; background:#0f1216; color:var(--text); padding:8px 12px; border-radius:10px; text-decoration:none; font-size:14px; }
+  .actions .apply:hover, .actions button:hover { border-color:#39424d; }
+  footer { color: var(--muted); text-align:center; padding: 18px; font-size: 12px; }
+  .grid { display:grid; gap:12px; }
+  .count { font-size: 13px; color: var(--muted); margin-top:8px; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+  .chip { font-size:12px; padding:4px 8px; border:1px solid #26303a; border-radius:999px; color:#cbd5e1; background:#0f1216; }
+</style>
+</head>
+<body data-keywords="warehouse|warehousing|logistics|logistic|picker|packer|forklift|varasto|logistiikka|material handler|order picker|post sorter|cleaner|cleaning|janitor|housekeeping|siivous|siivooja|toimitilahuoltaja|kitchen|dishwasher|cook|chef|ravintola|keittiö|keittio|keittiöapulainen|astiahuoltaja|tiskaaja|line cook|fast food|pikaruoka|McDonalds|Hesburger|Burger King|Subway|Taco Bell|Kotipizza" data-locations="Helsinki|Espoo|Vantaa">
+  <header>
+    <div class='wrap'>
+      <h1>Aggregated Jobs</h1>
+      <div class='controls'>
+        <input id='q' placeholder='Filter by title, company, etc.'/>
+        <select id='source'><option value=''>All sources</option></select>
+        <input id='loc' placeholder='Filter by location (e.g., Helsinki)'/>
+      </div>
+      <div class='chips' id='active'></div>
+      <div class='count' id='count'></div>
+    </div>
+  </header>
+  <main class='wrap grid' id='list'>
+    <article class='card' data-source='staffpoint' data-location='Helsinki' data-text='Ravintola- ja matkailuala Avoin hakemus ravintola-alalle Lappiin Enontekiö, Inari, Kittilä, Kolari, Muonio, Rovaniemi, Sodankylä Työsuhteen tyyppi : Määräaikainen  Helsinki  staffpoint'><div class='card-head'><a class='title' href='https://www.staffpoint.fi/tyopaikat/j8po' target='_blank' rel='noopener'>Ravintola- ja matkailuala Avoin hakemus ravintola-alalle Lappiin Enontekiö, Inari, Kittilä, Kolari, Muonio, Rovaniemi, Sodankylä Työsuhteen tyyppi : Määräaikainen</a><span class='source'>staffpoint</span></div><div class='meta'><span class='company'></span><span class='sep'>•</span><span class='location'>Helsinki</span><span class='sep'>•</span><span class='posted'></span></div><p class='snippet'></p><div class='actions'><button onclick="navigator.clipboard.writeText('https://www.staffpoint.fi/tyopaikat/j8po')">Copy link</button><a class='apply' href='https://www.staffpoint.fi/tyopaikat/j8po' target='_blank' rel='noopener'>Open & Apply ↗</a></div></article>
+<article class='card' data-source='staffpoint' data-location='Helsinki' data-text='Ravintola- ja matkailuala Avoin haku ravintolan työtehtäviin Espoo, Helsinki, Vantaa, Turku, Tampere, Oulu Työsuhteen tyyppi : Keikkatyö Haku päättyy : 28.09.2025  Helsinki  staffpoint'><div class='card-head'><a class='title' href='https://www.staffpoint.fi/tyopaikat/7lmP' target='_blank' rel='noopener'>Ravintola- ja matkailuala Avoin haku ravintolan työtehtäviin Espoo, Helsinki, Vantaa, Turku, Tampere, Oulu Työsuhteen tyyppi : Keikkatyö Haku päättyy : 28.09.2025</a><span class='source'>staffpoint</span></div><div class='meta'><span class='company'></span><span class='sep'>•</span><span class='location'>Helsinki</span><span class='sep'>•</span><span class='posted'></span></div><p class='snippet'></p><div class='actions'><button onclick="navigator.clipboard.writeText('https://www.staffpoint.fi/tyopaikat/7lmP')">Copy link</button><a class='apply' href='https://www.staffpoint.fi/tyopaikat/7lmP' target='_blank' rel='noopener'>Open & Apply ↗</a></div></article>
+<article class='card' data-source='staffpoint' data-location='Helsinki' data-text='Logistiikka Avoin haku teollisuuteen ja logistiikkaan, Keski-Suomi, Etelä- ja Pohjois-Savo Juva, Kangasniemi, Mikkeli, Pieksämäki, Savonlinna, Joroinen, Kuopio, Siilinjärvi, Suonenjoki, Varkaus, Joutsa, Jyväskylä, Viitasaari, Äänekoski Työsuhteen tyyppi : Toistaiseksi voimassa oleva  Helsinki  staffpoint'><div class='card-head'><a class='title' href='https://www.staffpoint.fi/tyopaikat/pKjx' target='_blank' rel='noopener'>Logistiikka Avoin haku teollisuuteen ja logistiikkaan, Keski-Suomi, Etelä- ja Pohjois-Savo Juva, Kangasniemi, Mikkeli, Pieksämäki, Savonlinna, Joroinen, Kuopio, Siilinjärvi, Suonenjoki, Varkaus, Joutsa, Jyväskylä, Viitasaari, Äänekoski Työsuhteen tyyppi : Toistaiseksi voimassa oleva</a><span class='source'>staffpoint</span></div><div class='meta'><span class='company'></span><span class='sep'>•</span><span class='location'>Helsinki</span><span class='sep'>•</span><span class='posted'></span></div><p class='snippet'></p><div class='actions'><button onclick="navigator.clipboard.writeText('https://www.staffpoint.fi/tyopaikat/pKjx')">Copy link</button><a class='apply' href='https://www.staffpoint.fi/tyopaikat/pKjx' target='_blank' rel='noopener'>Open & Apply ↗</a></div></article>
+<article class='card' data-source='staffpoint' data-location='Helsinki' data-text='Logistiikka Avoin haku teollisuuteen ja logistiikkaan, Päijät-Häme, Kymenlaakso, Etelä-Karjala Asikkala, Hollola, Heinola, Lahti, Padasjoki, Kouvola, Imatra, Lappeenranta Työsuhteen tyyppi : Toistaiseksi voimassa oleva  Helsinki  staffpoint'><div class='card-head'><a class='title' href='https://www.staffpoint.fi/tyopaikat/54Px' target='_blank' rel='noopener'>Logistiikka Avoin haku teollisuuteen ja logistiikkaan, Päijät-Häme, Kymenlaakso, Etelä-Karjala Asikkala, Hollola, Heinola, Lahti, Padasjoki, Kouvola, Imatra, Lappeenranta Työsuhteen tyyppi : Toistaiseksi voimassa oleva</a><span class='source'>staffpoint</span></div><div class='meta'><span class='company'></span><span class='sep'>•</span><span class='location'>Helsinki</span><span class='sep'>•</span><span class='posted'></span></div><p class='snippet'></p><div class='actions'><button onclick="navigator.clipboard.writeText('https://www.staffpoint.fi/tyopaikat/54Px')">Copy link</button><a class='apply' href='https://www.staffpoint.fi/tyopaikat/54Px' target='_blank' rel='noopener'>Open & Apply ↗</a></div></article>
+<article class='card' data-source='staffpoint' data-location='Helsinki' data-text='Asennus, huolto ja kunnossapito Avoin haku teollisuuteen ja logistiikkaan, Uusimaa Espoo, Helsinki, Vantaa, Hyvinkää, Järvenpää, Karkkila, Kerava, Loviisa, Lohja, Nurmijärvi, Tuusula Työsuhteen tyyppi : Toistaiseksi voimassa oleva  Helsinki  staffpoint'><div class='card-head'><a class='title' href='https://www.staffpoint.fi/tyopaikat/obE8' target='_blank' rel='noopener'>Asennus, huolto ja kunnossapito Avoin haku teollisuuteen ja logistiikkaan, Uusimaa Espoo, Helsinki, Vantaa, Hyvinkää, Järvenpää, Karkkila, Kerava, Loviisa, Lohja, Nurmijärvi, Tuusula Työsuhteen tyyppi : Toistaiseksi voimassa oleva</a><span class='source'>staffpoint</span></div><div class='meta'><span class='company'></span><span class='sep'>•</span><span class='location'>Helsinki</span><span class='sep'>•</span><span class='posted'></span></div><p class='snippet'></p><div class='actions'><button onclick="navigator.clipboard.writeText('https://www.staffpoint.fi/tyopaikat/obE8')">Copy link</button><a class='apply' href='https://www.staffpoint.fi/tyopaikat/obE8' target='_blank' rel='noopener'>Open & Apply ↗</a></div></article>
+<article class='card' data-source='staffpoint' data-location='Helsinki' data-text='Asennus, huolto ja kunnossapito Avoin työpaikka, teollisuus &amp;amp; logistiikka, Ylä-Savo Iisalmi, Kiuruvesi, Vieremä Työsuhteen tyyppi : Määräaikainen Haku päättyy : 30.09.2025  Helsinki  staffpoint'><div class='card-head'><a class='title' href='https://www.staffpoint.fi/tyopaikat/Al9e' target='_blank' rel='noopener'>Asennus, huolto ja kunnossapito Avoin työpaikka, teollisuus &amp; logistiikka, Ylä-Savo Iisalmi, Kiuruvesi, Vieremä Työsuhteen tyyppi : Määräaikainen Haku päättyy : 30.09.2025</a><span class='source'>staffpoint</span></div><div class='meta'><span class='company'></span><span class='sep'>•</span><span class='location'>Helsinki</span><span class='sep'>•</span><span class='posted'></span></div><p class='snippet'></p><div class='actions'><button onclick="navigator.clipboard.writeText('https://www.staffpoint.fi/tyopaikat/Al9e')">Copy link</button><a class='apply' href='https://www.staffpoint.fi/tyopaikat/Al9e' target='_blank' rel='noopener'>Open & Apply ↗</a></div></article>
+  </main>
+  <footer>Generated on 2025-08-27 — locally saved file. Click a card to apply ↗</footer>
+<script>
+(function(){
+  const list = document.getElementById('list');
+  const q = document.getElementById('q');
+  const sourceSel = document.getElementById('source');
+  const loc = document.getElementById('loc');
+  const cards = Array.from(list.querySelectorAll('.card'));
+  const count = document.getElementById('count');
+  const active = document.getElementById('active');
+
+  // Show active filters from data attributes injected by Python
+  (function(){
+    const kws = (document.body.dataset.keywords || '').split('|').filter(Boolean);
+    const locs = (document.body.dataset.locations || '').split('|').filter(Boolean);
+    const add = (txt) => { const s=document.createElement('span'); s.className='chip'; s.textContent=txt; active.appendChild(s); };
+    if (kws.length) { add('Keywords:'); kws.forEach(add); }
+    if (locs.length) { add('Locations:'); locs.forEach(add); }
+  })();
+
+  // Build source dropdown
+  const sources = Array.from(new Set(cards.map(c => c.dataset.source))).sort();
+  sources.forEach(s => { const opt = document.createElement('option'); opt.value = s; opt.textContent = s; sourceSel.appendChild(opt); });
+
+  function applyFilters(){
+    const term = q.value.trim().toLowerCase();
+    const src = sourceSel.value;
+    const locTerm = loc.value.trim().toLowerCase();
+    let visible = 0;
+    cards.forEach(c => {
+      const text = c.dataset.text.toLowerCase();
+      const okTerm = !term || text.includes(term);
+      const okSrc = !src || c.dataset.source === src;
+      const okLoc = !locTerm || (c.dataset.location || '').toLowerCase().includes(locTerm);
+      const show = okTerm && okSrc && okLoc;
+      c.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    count.textContent = visible + ' jobs shown';
+  }
+
+  q.addEventListener('input', applyFilters);
+  sourceSel.addEventListener('change', applyFilters);
+  loc.addEventListener('input', applyFilters);
+  applyFilters();
+})();
+</script>
+</body>
+</html>
